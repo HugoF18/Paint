@@ -1,0 +1,26 @@
+<!-- dans le head -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+
+<!-- dans le body -->
+<button onclick="export_pdf()">Download pdf</button>
+<button onclick="export_jpeg()">Download jpeg</button>
+
+<script>
+    function export_pdf(){
+        html2canvas(document.querySelector("#myCanvas")).then(canvas => {
+        canvas.toBlob(function(blob) {
+        window.saveAs(blob, 'canva.pdf');
+    
+        });
+        });
+    }
+    function export_jpeg(){
+        html2canvas(document.querySelector("#myCanvas")).then(canvas => {
+        canvas.toBlob(function(blob) {
+        window.saveAs(blob, 'canva.jpg');
+        });
+        });
+    }
+</script>

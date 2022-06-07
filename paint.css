@@ -1,0 +1,31 @@
+.wrapper {
+    display: flex;
+    grid-template-columns: 25px 25px;
+    grid-template-rows: repeat(8, 12,5%);
+    justify-content: flex end;
+  }
+img{
+  max-width: 500%;
+  max-height: 100%;
+}
+.table {
+  width:25px;
+  height: 25px;
+}
+#mainButton1{
+  width: 20px;
+  height: 20px;
+}
+#mainButton2{
+  width: 20px;
+  height: 20px;
+}
+#mainButton3{
+  width: 20px;
+  height: 20px;
+}
+canvas {
+  border: 1px solid black;
+  width: 560px;
+  height: 500px;
+}
